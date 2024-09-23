@@ -26,32 +26,38 @@
 <body>
     <!-- header part start -->
      
-    <header class="">
+    <header class="backdrop-blur-md sticky top-0">
         <section class="bg-headerbg pb-10">
             <div class=" flex flex-col md:flex-row gap-4 items-center justify-between py-6 container mx-auto">
-                <button class="btn bg-primaryBtn text-xl text-primaryText font-semibold px-8 " type="button">Blog</button>
+                <a class="btn bg-primaryBtn text-xl text-primaryText font-semibold px-8 " href="https://daisyui.com/components/button/">Blog</a>
                 <div class="flex items-center gap-4">
                     <img src="./assets/logo.png" alt="">
                     <h2 class="text-xl text-primaryText font-semibold">Donate Bangladesh</h2>
                 </div>
                 <div class="flex gap-3">
                     <img src="./assets/coin.png" alt="">
-                    <p class="text-xl"><span>5500 </span>BDT</p> 
+                    <p class="text-xl">
+                        <span id="main-balance">5500 </span>BDT
+                    </p> 
                 </div>            
             </div>
         </section>
         <!-- button -->
          <section class="container mx-auto mt-20 mb-8">
             <div class="flex justify-center gap-4">
-                <button class="btn bg-primaryBtn text-xl text-primaryText font-semibold px-8 " type="button">Donate</button>
-                <button class="btn text-xl text-primaryText text-opacity-70 font-semibold px-8 border border-solid border-borderbg" type="button">History</button>
+                <button 
+                id="donate-tab"
+                class="btn bg-primaryBtn text-xl text-primaryText font-semibold px-8 " type="button">Donate</button>
+                <button 
+                id="history-tab"
+                class="btn text-xl text-primaryText text-opacity-70 font-semibold px-8 border border-solid border-borderbg" type="button">History</button>
             </div>
          </section>
     </header>
     <!-- header part end -->
     <!-- main part start -->
     <main class=" container mx-auto">
-        <section>
+        <section id="donate-container" class="">
             <!-- 1st row  -->
             <div class="grid grid-cols-1 md:grid-cols-2 border border-solid border-borderbg rounded-2xl p-8">
                 <!-- 1st images -->
@@ -62,12 +68,18 @@
                 <div class="space-y-5">
                     <div class="flex items-center gap-3 bg-buttonbg rounded-lg p-4 max-w-fit">
                         <img src="./assets/coin.png" alt="">
-                        <p><span>0 </span>BDT</p> 
+                        <p>
+                            <span id="noakhali-balance">0 </span>BDT
+                        </p> 
                     </div>
-                    <h2 class="text-xl font-bold text-primaryText">Donate for Flood at Noakhali, Bangladesh</h2>
+                    <h2 id="noakhali-title" class="text-xl font-bold text-primaryText">Donate for Flood at Noakhali, Bangladesh</h2>
                     <p class="font-light text-primaryText text-opacity-70">The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
-                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered border-borderbg w-full" />
-                    <button type="button" class="w-full font-bold text-xl text-center bg-primaryBtn rounded-lg py-3">Donate Now</button>
+                    <input type="text" placeholder="Write Donation Amount" 
+                    id="noakhali-fund"
+                    class="input input-bordered border-borderbg w-full" />
+                    <button type="button" 
+                    id="noakhali-donate"
+                    class="w-full font-bold text-xl text-center bg-primaryBtn rounded-lg py-3">Donate Now</button>
 
                 </div>
             </div>
@@ -81,13 +93,19 @@
                 <div class="space-y-5">
                     <div class="flex items-center gap-3 bg-buttonbg rounded-lg p-4 max-w-fit">
                         <img src="./assets/coin.png" alt="">
-                        <p><span>0 </span>BDT</p> 
+                        <p>
+                            <span id="feni-balance">0 </span>BDT
+                        </p> 
                     </div>
-                    <h2 class="text-xl font-bold text-primaryText">Donate for Flood Relief in Feni,Bangladesh</h2>
+                    <h2 id="feni-title" class="text-xl font-bold text-primaryText">Donate for Flood Relief in Feni,Bangladesh</h2>
                     <p class="font-light text-primaryText text-opacity-70">The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies, to those affected by this calamity. Together, we can offer crucial support and help rebuild lives in the aftermath of this disaster. Every contribution counts towards making a real difference. Please consider donating today to assist those in urgent need.
                     </p>
-                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered border-borderbg w-full" />
-                    <button type="button" class="w-full font-bold text-xl text-center bg-primaryBtn rounded-lg py-3">Donate Now</button>
+                    <input type="text" placeholder="Write Donation Amount" 
+                    id="feni-fund"
+                    class="input input-bordered border-borderbg w-full" />
+                    <button type="button" 
+                    id="feni-donate"
+                    class="w-full font-bold text-xl text-center bg-primaryBtn rounded-lg py-3">Donate Now</button>
 
                 </div>
             </div>
@@ -101,25 +119,38 @@
                 <div class="space-y-5">
                     <div class="flex items-center gap-3 bg-buttonbg rounded-lg p-4 max-w-fit">
                         <img src="./assets/coin.png" alt="">
-                        <p><span>0 </span>BDT</p> 
+                        <p>
+                            <span id="quota-balance">0 </span>BDT
+                        </p> 
                     </div>
-                    <h2 class="text-xl font-bold text-primaryText">Aid for Injured in the Quota Movement</h2>
+                    <h2 id="quota-title" class="text-xl font-bold text-primaryText">Aid for Injured in the Quota Movement</h2>
                     <p class="font-light text-primaryText text-opacity-70">The recent Quota movement has resulted in numerous injuries and significant hardship for many individuals. Your support is crucial in providing medical assistance, rehabilitation, and necessary supplies to those affected. By contributing, you help ensure that injured individuals receive the care and support they need during this challenging time. Every donation plays a vital role in alleviating their suffering and aiding in their recovery. Please consider making a donation to support these brave individuals in their time of need.
                     </p>
-                    <input type="text" placeholder="Write Donation Amount" class="input input-bordered border-borderbg w-full" />
-                    <button type="button" class="w-full font-bold text-xl text-center bg-primaryBtn rounded-lg py-3">Donate Now</button>
+                    <input type="text" placeholder="Write Donation Amount" 
+                    id="quota-fund"
+                    class="input input-bordered border-borderbg w-full" />
+                    <button type="button" 
+                    id="quota-donate"
+                    class="w-full font-bold text-xl text-center bg-primaryBtn rounded-lg py-3">Donate Now</button>
 
                 </div>
             </div>
         </section>
+        
     </main>
     <!-- main part end -->
+    <section id="history-container" class="container mx-auto hidden">
+        <div id="history-list">
+
+        </div>
+        
+    </section>
     <!-- footer part start -->
     <footer class="mt-20">
         <div class="bg-headerbg h-36"></div>
     </footer>
     <!-- footer part end -->
-    
+    <script src="./js/index.js"></script>
 </body>
 </html>
 
