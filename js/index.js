@@ -20,7 +20,7 @@ document.getElementById('noakhali-donate').addEventListener('click', function ()
     const historyContainer = document.createElement('div');
     historyContainer.className= 'border border-solid border-borderbg rounded-2xl p-8';
     historyContainer.innerHTML = `
-    <p class="text-xl font-bold text-primaryText">${noakhaliFund.toFixed(2)} Taka ${document.getElementById('noakhali-title').innerText}</p>
+    <p class="text-xl font-bold text-primaryText">${noakhaliFund.toFixed(2)} Taka is Donated for ${document.getElementById('noakhali-title').innerText}</p>
         <p class="font-light text-primaryText text-opacity-70"> Date: ${new Date()}</p>    
     `
     const historyList= document.getElementById('history-list');
@@ -44,7 +44,7 @@ document.getElementById('feni-donate').addEventListener('click', function () {
     const historyContainer = document.createElement('div');
     historyContainer.className= 'border border-solid border-borderbg rounded-2xl p-8';
     historyContainer.innerHTML = `
-    <p class="text-xl font-bold text-primaryText">${feniFund.toFixed(2)} Taka ${document.getElementById('feni-title').innerText}</p>
+    <p class="text-xl font-bold text-primaryText">${feniFund.toFixed(2)} Taka is Donated for ${document.getElementById('feni-title').innerText}</p>
         <p class="font-light text-primaryText text-opacity-70"> Date: ${new Date()}</p>
     `
     const historyList= document.getElementById('history-list');
@@ -64,7 +64,7 @@ document.getElementById('quota-donate').addEventListener('click', function () {
     const historyContainer = document.createElement('div');
     historyContainer.className= 'border border-solid border-borderbg rounded-2xl p-8';
     historyContainer.innerHTML = `
-    <p class="text-xl font-bold text-primaryText">${quotaFund.toFixed(2)} Taka ${document.getElementById('quota-title').innerText}</p>
+    <p class="text-xl font-bold text-primaryText">${quotaFund.toFixed(2)} Taka is Donated for ${document.getElementById('quota-title').innerText}</p>
         <p class="font-light text-primaryText text-opacity-70"> Date: ${new Date()}</p>    
     `
     const historyList= document.getElementById('history-list');

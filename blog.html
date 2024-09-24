@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                headerbg: '#F9F7F3',
+                primaryBtn: '#B4F461',
+                primaryText: '#111111',
+                borderbg: 'rgba(17,17,17,0.3)',
+                buttonbg: 'rgba(17,17,17,0.05)',
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body>
+    <!-- header part start -->
+     
+    <header class="backdrop-blur-md sticky top-0">
+        <section class="bg-headerbg pb-10">
+            <div class=" flex flex-col md:flex-row gap-4 items-center justify-between py-6 container mx-auto">
+                <a class="btn bg-primaryBtn text-xl text-primaryText font-semibold px-8 " href="index.html">Home</a>
+                <div class="flex items-center gap-4">
+                    <img src="./assets/logo.png" alt="">
+                    <h2 class="text-xl text-primaryText font-semibold">Donate Bangladesh</h2>
+                </div>
+                <div class="flex gap-3">
+                    <img src="./assets/coin.png" alt="">
+                    <p class="text-xl">
+                        <span id="main-balance">5500 </span>BDT
+                    </p> 
+                </div>            
+            </div>
+        </section>
+    </header>
+    <!-- header part end -->
+    <!-- main part start -->
+    <main class=" container mx-auto">
+        <section class="">
+            <h1 class="text-5xl py-10">Important FAQ</h1>
+
+
+            <div class="join join-vertical w-full">
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" checked="checked" />
+                  <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                  <div class="collapse-content">
+                    <p>Document Object Model (DOM) is a programming interface for web documents. It represents the structure of a document as a tree of objects and manipulate HTML dynamically.              
+                    </p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                  <div class="collapse-content">
+                    <p> i can select an element 5 types of way from the DOM. There are 
+                      <li>getElementById</li>
+                      <li>getElementsByClassName</li>
+                      <li>getElementsByTagName</li>
+                      <li>querySelector</li>
+                      <li>querySelectorAll</li>
+                    </p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                  <div class="collapse-content">
+                    <p>Event delegation is a technique in the DOM where a single event listener is attached to a parent element, capturing events from child elements as they bubble up. This is useful because It improves performance by reducing the number of listeners, simplifies management of dynamic content, and enhances memory efficiency by requiring fewer resources for event handling.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                  <div class="collapse-content">
+                    <p>We can manipulate an element's attributes and styles in the DOM using JavaScript. To change attributes, we use methods like setAttribute, getAttribute, and removeAttribute. This allows for dynamic updates to elements. For instance, you could set a background color, change text size, or toggle classes based on user interaction, enhancing the user experience effectively.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">Can I donate money ?</div>
+                  <div class="collapse-content">
+                    <p>Yes You Can.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">How can I help during a flood?</div>
+                  <div class="collapse-content">
+                    <p>You can help by:                        
+                      <li>Donating to local relief organizations.</li>
+                      <li>Volunteering your time to assist in evacuation and recovery efforts.</li>
+                      <li>Spreading awareness about safety measures.</li></p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">What payment methods do you accept for donations?</div>
+                  <div class="collapse-content">
+                    <p>We accept a variety of payment methods, including:
+                        <li>Bank transfers</li>
+                        <li>Mobile payment services (e.g., bKash, Nagad, Rocket)</li>
+                        <li>Credit and debit cards (Visa, MasterCard)</li>
+                        <li>PayPal</li>
+                    </p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">How can I donate using mobile payment services?</div>
+                  <div class="collapse-content">
+                    <p>To donate via mobile payment services like bKash or Nagad:
+                        <li>Open your mobile app.</li>
+                        <li>Select the option for sending money.</li>
+                        <li>Enter our donation number: <span class="text-red-700 font-bold text-2xl">017XXXXXXXX</span>.</li>
+                        <li>Specify the amount and confirm the transaction.</li>
+                    </p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">Is there a minimum donation amount?</div>
+                  <div class="collapse-content">
+                    <p>There is no strict minimum amount</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">Will I receive a receipt for my donation?</div>
+                  <div class="collapse-content">
+                    <p>Yes, all donors will receive a confirmation email or message acknowledging their donation along with a receipt for tax purposes.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">How will my donation be used?</div>
+                  <div class="collapse-content">
+                    <p>Your donation will go directly towards flood relief efforts in Feni, including emergency supplies, medical assistance, and community rebuilding initiatives. Regular updates will be provided to donors on the impact of their contributions.</p>
+                  </div>
+                </div>
+              </div>
+        </section>        
+    </main>
+    <!-- main part end -->
+    
+    <!-- footer part start -->
+    <footer class="mt-20">
+        <div class="bg-headerbg h-36"></div>
+    </footer>
+    <!-- footer part end -->
+</body>
+</html>
+
+
