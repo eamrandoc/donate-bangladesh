@@ -1,26 +1,29 @@
-// const mainBalance = document.getElementById('main-balance').innerText;
-// const noakhaliBalance = document.getElementById('noakhali-balance').innerText;
-// const noakhaliFund = document.getElementById('noakhali-fund').value;
-// const feniBalance = document.getElementById('feni-balance').innerText;
-// const feniFund = document.getElementById('feni-fund').value;
-// const quotaBalance = document.getElementById('quota-balance').innerText;
-// const quotaFund = document.getElementById('quota-fund').value;
-// console.table({mainBalance, noakhaliBalance,noakhaliFund,feniBalance,feniFund,quotaBalance,quotaFund});
+// global function 
+function getInputValue(id) {
+    return parseFloat(document.getElementById(id).value);    
+}
+function getInnerText(id) {
+    return parseFloat(document.getElementById(id).innerText);    
+}
 
 
 // 1st row 
 document.getElementById('noakhali-donate').addEventListener('click', function () {
-    const mainBalance = parseFloat(document.getElementById('main-balance').innerText);
-    const noakhaliBalance = parseFloat(document.getElementById('noakhali-balance').innerText);
-    const noakhaliFund = parseFloat(document.getElementById('noakhali-fund').value);   
+    const mainBalance = getInnerText('main-balance');
+    const noakhaliBalance = getInnerText('noakhali-balance');
+    const noakhaliFund = getInputValue('noakhali-fund');   
 
-       if (isNaN(noakhaliFund) || noakhaliFund <= 0 || mainBalance < noakhaliFund || !isFinite(document.getElementById('noakhali-fund').value)) {
-        alert('Invalid Input')
+       if (isNaN(noakhaliFund) || noakhaliFund <= 0 || !isFinite(document.getElementById('noakhali-fund').value)) {
+        alert('Invalid Input');
         return;
-    };
-
+    }
+       if ( mainBalance < noakhaliFund) {
+        alert('Insufficient Balance');
+        return;
+    }
+    
     const addBalance = noakhaliBalance + noakhaliFund ;
-    document.getElementById('noakhali-balance').innerText = addBalance.toFixed(2) ;
+    document.getElementById('noakhali-balance').innerText = addBalance.toFixed(2);
     const remainBalance = mainBalance - noakhaliFund;
     document.getElementById('main-balance').innerText = remainBalance.toFixed(2); 
 
@@ -29,9 +32,8 @@ document.getElementById('noakhali-donate').addEventListener('click', function ()
     document.getElementById('modal-btn').addEventListener('click', function () {
         
         document.getElementById('noakhali-fund').value = '';
-    });
-    
-    
+    })
+        
     const historyContainer = document.createElement('div');
     historyContainer.className= 'border border-solid border-borderbg rounded-2xl p-8';
     historyContainer.innerHTML = `
@@ -39,18 +41,22 @@ document.getElementById('noakhali-donate').addEventListener('click', function ()
         <p class="font-light text-primaryText text-opacity-70"> Date: ${new Date()}</p>    
     `
     const historyList= document.getElementById('history-list');
-    historyList.insertBefore(historyContainer , historyList.firstChild);   
+    historyList.insertBefore(historyContainer , historyList.firstChild);
 
 })
 
 // 2nd row 
 document.getElementById('feni-donate').addEventListener('click', function () {
-    const mainBalance = parseFloat(document.getElementById('main-balance').innerText);
-    const feniBalance = parseFloat(document.getElementById('feni-balance').innerText);
-    const feniFund = parseFloat(document.getElementById('feni-fund').value);
+    const mainBalance = getInnerText('main-balance');
+    const feniBalance = getInnerText('feni-balance');
+    const feniFund = getInputValue('feni-fund');      
 
-    if (isNaN(feniFund) || feniFund <= 0 || mainBalance < feniFund || !isFinite(document.getElementById('feni-fund').value)) {
-        alert('Invalid Input')
+    if (isNaN(feniFund) || feniFund <= 0 || !isFinite(document.getElementById('feni-fund').value)) {
+        alert('Invalid Input');
+        return;
+    }
+    if ( mainBalance < feniFund) {
+        alert('Insufficient Balance');
         return;
     }
 
@@ -78,12 +84,17 @@ document.getElementById('feni-donate').addEventListener('click', function () {
 
 // 3rd row 
 document.getElementById('quota-donate').addEventListener('click', function () {
-    const mainBalance = parseFloat(document.getElementById('main-balance').innerText);
-    const quotaBalance = parseFloat(document.getElementById('quota-balance').innerText);
-    const quotaFund = parseFloat(document.getElementById('quota-fund').value);
+    const mainBalance = getInnerText('main-balance');
+    const quotaBalance = getInnerText('quota-balance');
+    const quotaFund = getInputValue('quota-fund');
+    
 
-    if (isNaN(quotaFund) || quotaFund <= 0 || mainBalance < quotaFund || !isFinite(document.getElementById('quota-fund').value)) {
-        alert('Invalid Input')
+    if (isNaN(quotaFund) || quotaFund <= 0 || !isFinite(document.getElementById('quota-fund').value)) {
+        alert('Invalid Input');
+        return;
+    }
+    if ( mainBalance < quotaFund) {
+        alert('Insufficient Balance');
         return;
     }
 
@@ -126,18 +137,16 @@ historyTab.addEventListener('click' , function () {
     
 })
 // donateTab
-const donateTab = document.getElementById('donate-tab')
+const donateTab = document.getElementById('donate-tab');
 donateTab.addEventListener('click' , function () {
     donateTab.classList.remove('text-opacity-70', 'border', 'border-solid',  'border-borderbg')
     donateTab.classList.add('bg-primaryBtn','hover:bg-primaryBtn');
     historyTab.classList.add('text-opacity-70',  'border', 'border-solid',  'border-borderbg')
     historyTab.classList.remove('bg-primaryBtn','hover:bg-primaryBtn');
-   
+    
 
     document.getElementById('donate-container').classList.remove('hidden');
     document.getElementById('history-container').classList.add('hidden');
     
-});
+})
 
-
-             
