@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate Bangladesh</title>
+    <!-- Lexend google font links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <!-- daisyui and tailwindcss links -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -17,17 +22,20 @@
                 primaryText: '#111111',
                 borderbg: 'rgba(17,17,17,0.3)',
                 buttonbg: 'rgba(17,17,17,0.05)',
+              },
+              fontFamily:{
+                lexendFont: 'Lexend',
               }
             }
           }
         }
       </script>
 </head>
-<body>
+<body class="lexendFont">
     <!-- header part start -->
      
     <header class="backdrop-blur-lg sticky top-0 opacity-95">
-        <section class="bg-headerbg pb-10">
+        <section class="bg-headerbg lg:pb-10">
             <div class=" flex flex-col md:flex-row gap-4 items-center justify-between py-6 container mx-auto">
                 <a class="btn bg-primaryBtn text-xl text-primaryText font-semibold px-8 " href="blog.html">Blog</a>
                 <div class="flex items-center gap-4">
@@ -43,14 +51,14 @@
             </div>
         </section>
         <!-- button -->
-         <section class="container mx-auto mt-20 mb-8">
+         <section class="container mx-auto lg:mt-20 mb-8">
             <div class="flex justify-center gap-4">
                 <button 
                 id="donate-tab"
-                class="btn bg-primaryBtn text-xl text-primaryText font-semibold px-8 " type="button">Donate</button>
+                class="btn bg-primaryBtn text-xl text-primaryText font-semibold px-8 hover:bg-primaryBtn" type="button">Donate</button>
                 <button 
                 id="history-tab"
-                class="btn text-xl text-primaryText text-opacity-70 font-semibold px-8 border border-solid border-borderbg" type="button">History</button>
+                class="btn text-xl text-primaryText text-opacity-70 font-semibold px-8 border border-solid border-borderbg " type="button">History</button>
             </div>
          </section>
     </header>
@@ -139,20 +147,22 @@
         
     </main>
     <!-- main part end -->
-    <section id="history-container" class="container mx-auto hidden">
-        <div id="history-list">
+    <!-- history part start -->
+    <section id="history-container" class="container mx-auto  hidden">
+        <div id="history-list" class="space-y-4">
 
         </div>
         
     </section>
+    <!-- history part end -->
     <!-- footer part start -->
     <footer class="mt-20">
         <div class="bg-headerbg h-36"></div>
     </footer>
     <!-- footer part end -->
 
-    <!-- modal part  -->
-     <section>
+    <!-- modal part start -->
+    <section>
         <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
             <div class="modal-box text-center space-y-5">
 
@@ -165,13 +175,13 @@
                 
               <div class="modal-action flex justify-center">
                 <form method="dialog">
-                  <!-- if there is a button in form, it will close the modal -->
                   <button id="modal-btn" class="btn">Close confirmation</button>
                 </form>
               </div>
             </div>
-          </dialog>
-     </section>
+        </dialog>
+    </section>
+     <!-- modal part end -->
 
 
 

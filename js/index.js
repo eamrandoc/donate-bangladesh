@@ -114,16 +114,14 @@ document.getElementById('quota-donate').addEventListener('click', function () {
 // historyTab
 const historyTab= document.getElementById('history-tab')
 historyTab.addEventListener('click' , function () {
-    historyTab.classList.add('bg-primaryBtn');
+    historyTab.classList.add('bg-primaryBtn', 'hover:bg-primaryBtn');
     historyTab.classList.remove('text-opacity-70',  'border', 'border-solid',  'border-borderbg');
-    donateTab.classList.remove('bg-primaryBtn');
+    donateTab.classList.remove('bg-primaryBtn','hover:bg-primaryBtn');
     donateTab.classList.add('text-opacity-70',  'border', 'border-solid',  'border-borderbg');
-
 
 
     document.getElementById('donate-container').classList.add('hidden');
     document.getElementById('history-container').classList.remove('hidden');
-
 
     
 })
@@ -131,9 +129,9 @@ historyTab.addEventListener('click' , function () {
 const donateTab = document.getElementById('donate-tab')
 donateTab.addEventListener('click' , function () {
     donateTab.classList.remove('text-opacity-70', 'border', 'border-solid',  'border-borderbg')
-    donateTab.classList.add('bg-primaryBtn');
+    donateTab.classList.add('bg-primaryBtn','hover:bg-primaryBtn');
     historyTab.classList.add('text-opacity-70',  'border', 'border-solid',  'border-borderbg')
-    historyTab.classList.remove('bg-primaryBtn');
+    historyTab.classList.remove('bg-primaryBtn','hover:bg-primaryBtn');
    
 
     document.getElementById('donate-container').classList.remove('hidden');
